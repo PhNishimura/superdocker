@@ -1,0 +1,5 @@
+/* Import all CSS from the original css files */
+@import '/frontend/css/base.css';
+@import '/frontend/css/layouts.css';
+@import '/frontend/css/responsive.css';
+@import '/frontend/css/theme.css';
