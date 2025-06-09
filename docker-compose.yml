@@ -9,12 +9,9 @@ services:
       - NODE_ENV=production
       - PORT=3001
     volumes:
-      - backend-db:/app/database.sqlite
+      - concord-db:/app/database.sqlite
     networks:
       - app-network
-    deploy:
-      restart_policy:
-        condition: on-failure
 
   frontend:
     image: concord-frontend:latest
@@ -24,13 +21,10 @@ services:
       - backend
     networks:
       - app-network
-    deploy:
-      restart_policy:
-        condition: on-failure
-
-volumes:
-  backend-db:
 
 networks:
   app-network:
-    external: true
+    driver: overlay  # necessário para Swarm
+
+volumes:
+  concord-db:
