@@ -6,7 +6,7 @@ import { faFacebook, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/fr
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import App from './src/App.vue'
 import router from './src/router'
-import '../frontend/css/base.css'
+import './css/base.css'
 
 library.add(faShoppingCart, faFacebook, faInstagram, faLinkedin, faXTwitter)
 
